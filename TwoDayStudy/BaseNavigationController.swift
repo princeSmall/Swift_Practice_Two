@@ -12,7 +12,14 @@ class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.barTintColor = UIColor.green
+        let attributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.blue,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+        // 设置导航栏字体颜色，字体大小
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        
+        // 设置导航栏背景颜色
+        UINavigationBar.appearance().barTintColor = UIColor.green
         // Do any additional setup after loading the view.
     }
     
